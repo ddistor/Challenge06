@@ -1,0 +1,27 @@
+<div class="column">
+  <div class="card">
+    <div class="card-block">
+      <h3 class="title">
+        <%= customer.full_name %>
+      </h3>
+      <% if customer.image.present? %>
+        <div class="card-image">
+          <figure class="image">
+            <%= image_tag customer.image %>
+          </figure>
+        </div>
+      <% end %>
+    </div>
+    <footer class="card-content">
+      <p>
+        Phone Number: <br><%= customer.phone_number %>
+      </p>
+      <p>
+        Email Address: <br><%= customer.email_address %>
+      </p>
+      <p>
+        Notes: <br><%= customer.notes %>
+      </p>
+    </footer>
+  </div>
+</div>
