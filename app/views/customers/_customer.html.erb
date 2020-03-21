@@ -1,12 +1,12 @@
-<div class="column">
+<div class="column is-one-fifth">
   <div class="card">
     <div class="card-block">
-      <h3 class="title">
+      <h3 class="title is-3">
         <%= customer.full_name %>
       </h3>
       <% if customer.image.present? %>
         <div class="card-image">
-          <figure class="image">
+          <figure class="image is-1by1">
             <%= image_tag customer.image %>
           </figure>
         </div>
@@ -14,13 +14,13 @@
     </div>
     <footer class="card-content">
       <p>
-        Phone Number: <br><%= customer.phone_number %>
+        <%= customer.phone_number %>
       </p>
       <p>
-        Email Address: <br><%= customer.email_address %>
+        <%= !customer.email_address.empty? ? customer.email_address : "missing" %>
       </p>
       <p>
-        Notes: <br><%= customer.notes %>
+        <%= customer.notes %>
       </p>
     </footer>
   </div>
