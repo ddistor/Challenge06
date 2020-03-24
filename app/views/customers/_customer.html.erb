@@ -15,10 +15,10 @@
     <footer class="card-content">
       <p>
         <%= customer.phone_number %>
-      </p>
+      </p><br/>
       <p>
-        <%= !customer.email_address.empty? ? customer.email_address : "missing" %>
-      </p>
+        <%= !customer.email_address.empty? ? customer.email_address : "This customer has no email." %>
+      </p><br/>
       <p>
         <%= customer.notes %>
       </p>
